@@ -20,13 +20,19 @@
                 <div class="card-body">
                     <h5 class="card-title">Special title treatment</h5>
                     <p class="card-text">
+                        <label for="startstation"> Stazione di Partenza  </label>
+                        <input type="text" id="startstation">
+
                         <label for="distance"> Distance  </label>
                         <input type="text" id="distance">
             
                         <label for="age"> Age  </label> 
                         <input type="text" id="age">
+
+                        <label for="arrival"> Stazione di Arrivo  </label>
+                        <input type="text" id="arrival">
                     </p>
-                <a href="#" class="btn btn-primary" id="submit-btn">Calcola Prezzo</a>
+                <button class="ms_btn" id="submit-btn">Calcola Prezzo</button>
                 </div>
             </div>
             
@@ -35,7 +41,10 @@
                 <h1>Riassunto acquisto biglietto:</h1>
                 </div>
                 <ul class="list-group list-group-flush">
-                <li class="list-group-item">Partenza da:</li>
+                <li class="list-group-item">
+                    Partenza da:
+                    <h4 id=""></h4>
+                </li>
                 <li class="list-group-item">Orario:</li>
                 <li class="list-group-item">Arrivo a:</li>
                 <li class="list-group-item">Orario:</li>
@@ -45,7 +54,7 @@
                     <h1 id="error"></h1>
                     <!-- RESULT -->
                     <h1 id="pricedisplay"></h1>
-                    <a href="#" class="btn btn-primary" id="deleteBtn">Annulla</a>
+                    <button class="ms_btn" id="deleteBtn">Annulla</a>
                 </div>
                 
             </div>

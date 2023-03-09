@@ -13,3 +13,11 @@ section {
     margin: 20px;
     background-color: rgb(255, 66, 81);
 }
+
+.ms_btn {
+    padding: 5px;
+    background-color: rgb(38, 92, 192);
+    border-radius: 10px;
+    color: white;
+    
+}

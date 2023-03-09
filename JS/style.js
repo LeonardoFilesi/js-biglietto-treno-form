@@ -33,6 +33,11 @@ console.log(userAge);
 
 inputUserAge.value = "";
 
+// OPZIONALE: Chiedere stazione di partenza e stazione di arrivo
+const inputStartStation = document.getElementById("startstation");
+const startStation = inputStartStation.value;
+
+
 // Calcolare il prezzo totale del viaggio applicando queste regole
     // Prezzo al km 0.21£
 const priceKm = (0.21);
@@ -70,4 +75,12 @@ if (isNaN(travelKm)) {
 });
 
 
+// BOTTONE ANNULLA:
+const deleteBtn = document.getElementById("delete-btn");
+deleteBtn.addEventListener("click", function() {
 
+});
+
+const pricedisplay = document.getElementById("pricedisplay");
+pricedisplay.className = "";
+document.getElementById("error") = "";
