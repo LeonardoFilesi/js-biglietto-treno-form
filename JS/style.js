@@ -17,10 +17,6 @@
 const sumbitBtn = document.getElementById("submit-btn");
 sumbitBtn.addEventListener("click", function() {
 
-     // Ripulire il risultato
-        const pricedisplay = document.getElementById("pricedisplay");
-        pricedisplay.className = "";
-
 // LABELS:
 
 // Salutare l'utente e chiedere il numero di chilometri che vuole percorrere
@@ -60,6 +56,9 @@ if (userAge < 18) {
 console.log(finalPrice)
 
 // Stampare prezzo finale con controllo risposte utente
+const pricedisplay = document.getElementById("pricedisplay");
+pricedisplay.className = "";
+
 if (isNaN(travelKm)) {
     document.getElementById("error").innerHTML = "Errore. Ricaricare la pagina e compilare il form con dei numeri"
 } else if (isNaN(userAge)) {
@@ -68,6 +67,7 @@ if (isNaN(travelKm)) {
     document.getElementById("pricedisplay").innerHTML = `Grazie utente. Il prezzo del suo biglietto è ${finalPrice}£`;
 }
 
-
-
 });
+
+
+

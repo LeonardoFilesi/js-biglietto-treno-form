@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    background-color: bisque;
+    padding: 20px;
+}
+
+.card1 {
+    margin: 20px;
+    background-color: rgb(255, 66, 81);
+}
