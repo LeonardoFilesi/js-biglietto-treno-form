@@ -9,63 +9,78 @@
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
+        <section class="ms_bgcolor1">
+            <div class="container g-3 py-3">
 
-    <div class="container">
-        <section class="container-fluid">
+                <div class="card card1">
+                    <img src="img/train-logo-design-template-premium-Graphics-9725168-1.jpg">
+                    <div class="card-body">
+                      <h1 class="card-title ms_almost-white">Benvenuto in Bool-Train</h1>
+                      <p class="card-text">Qui potrai calcolare il prezzo del tuo biglietto, compilando il form e facendo un preventivo!</p>
+                      
+                    </div>
+                  </div>
 
-            <div class="card card1">
-                <div class="card-header">
-                <h1>Benvenuto su TreniBool, calcoliamo il prezzo del tuo biglietto</h1>
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">
-                        <label for="startstation"> Stazione di Partenza  </label>
-                        <input type="text" id="startstation">
+                <div class="card card1">
 
-                        <label for="distance"> Distance  </label>
-                        <input type="text" id="distance">
-            
-                        <label for="age"> Age  </label> 
-                        <input type="text" id="age">
+                    <div class="card-header ms_almost-white">
+                    <h2>Calcoliamo il prezzo del tuo biglietto</h2>
+                    </div>
 
-                        <label for="arrival"> Stazione di Arrivo  </label>
-                        <input type="text" id="arrival">
-                    </p>
-                <button class="ms_btn" id="submit-btn">Calcola Prezzo</button>
-                </div>
-            </div>
-            
-            <div class="card card1">
-                <div class="card-header">
-                <h1>Riassunto acquisto biglietto:</h1>
-                </div>
-                <ul class="list-group list-group-flush">
-                <li class="list-group-item">
-                    Partenza da:
-                    <h4 id=""></h4>
-                </li>
-                <li class="list-group-item">Orario:</li>
-                <li class="list-group-item">Arrivo a:</li>
-                <li class="list-group-item">Orario:</li>
-                </ul>
-                <div class="card-footer">
-                    <!-- ERROR -->
-                    <h1 id="error"></h1>
-                    <!-- RESULT -->
-                    <h1 id="pricedisplay"></h1>
-                    <button class="ms_btn" id="deleteBtn">Annulla</a>
+                    <div class="card-body">
+
+                        <h4 class="card-title">Compila i seguenti campi</h4>
+                        
+                        <p class="card-text">
+                            <label for="startstation"> Partenza  </label>
+                            <input type="text" id="startstation">
+
+                            <label for="distance"> Distanza  </label>
+                            <input type="text" id="distance">
+                
+                            <label for="age"> Età  </label> 
+                            <input type="text" id="age">
+
+                            <label for="arrival"> Arrivo  </label>
+                            <input type="text" id="arrival">
+                        </p>
+
+                    <button class="ms_btn" id="submit-btn">Calcola Prezzo</button>
+                    </div>
                 </div>
                 
+                <div class="card card1">
+
+                    <div class="card-header ms_almost-white">
+                    <h1>Riassunto acquisto biglietto:</h1>
+                    </div>
+
+                    <ul class="list-group list-group-flush">
+                        
+                        <li class="list-group-item ms_bgcolor2">
+                            Partenza da:
+                            <h4 id="departure-station"></h4>
+                        </li>
+                    
+                        <li class="list-group-item ms_bgcolor2">
+                            Arrivo a:
+                            <h4 id="arrival-station"></h4>
+                        </li>
+
+                    </ul>
+
+                    <div class="card-footer">
+                        <!-- ERROR -->
+                        <h1 id="error"></h1>
+                        <!-- RESULT -->
+                        <h1 id="pricedisplay"></h1>
+                        <button class="ms_btn" id="deleteBtn">Annulla</button>
+                    </div>
+                    
+                </div>
             </div>
         </section>  
-    </div>
     
-    
-   
-
-
-
     <script src="JS/style.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>

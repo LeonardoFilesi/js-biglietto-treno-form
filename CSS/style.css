@@ -4,11 +4,6 @@
     box-sizing: border-box;
 }
 
-section {
-    background-color: bisque;
-    padding: 20px;
-}
-
 .card1 {
     margin: 20px;
     background-color: rgb(255, 66, 81);
@@ -19,5 +14,24 @@ section {
     background-color: rgb(38, 92, 192);
     border-radius: 10px;
     color: white;
-    
+    outline: 2px solid white;
+}
+
+.ms_bgcolor1 {
+    background-color: rgb(5, 26, 34);
+}
+
+.ms_bgcolor2 {
+    background-color: rgb(255, 66, 81);
+}
+
+.ms_almost-white {
+    color: rgb(233, 190, 135);
+}
+
+img {
+    width: 60%;
+    margin: 10px auto;
+    background-color: rgb(5, 26, 34);
+    border-radius: 150px;
 }

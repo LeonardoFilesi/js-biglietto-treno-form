@@ -35,7 +35,15 @@ inputUserAge.value = "";
 
 // OPZIONALE: Chiedere stazione di partenza e stazione di arrivo
 const inputStartStation = document.getElementById("startstation");
-const startStation = inputStartStation.value;
+const startStation = inputStartStation;
+console.log(startStation)
+document.getElementById("departure-station").innerHTML = ` ${startStation}`;
+
+
+const inputArrival = document.getElementById("arrival");
+const arrivalStation = inputArrival;
+console.log(arrivalStation)
+document.getElementById("arrival-station").innerHTML = ` ${arrivalStation}  `;
 
 
 // Calcolare il prezzo totale del viaggio applicando queste regole
@@ -65,22 +73,22 @@ const pricedisplay = document.getElementById("pricedisplay");
 pricedisplay.className = "";
 
 if (isNaN(travelKm)) {
-    document.getElementById("error").innerHTML = "Errore. Ricaricare la pagina e compilare il form con dei numeri"
+    document.getElementById("error").innerHTML = "Errore! Ricaricare la pagina e compilare il form correttamente"
 } else if (isNaN(userAge)) {
-    document.getElementById("error").innerHTML = "Errore. Ricaricare la pagina e compilare il form con dei numeri"
+    document.getElementById("error").innerHTML = "Errore! Ricaricare la pagina e compilare il form correttamente"
 } else {
-    document.getElementById("pricedisplay").innerHTML = `Grazie utente. Il prezzo del suo biglietto è ${finalPrice}£`;
+    document.getElementById("pricedisplay").innerHTML = `Il prezzo del suo biglietto è: ${finalPrice}£`;
 }
 
 });
 
 
 // BOTTONE ANNULLA:
-const deleteBtn = document.getElementById("delete-btn");
+const deleteBtn = document.getElementById("deleteBtn");
 deleteBtn.addEventListener("click", function() {
 
+    document.getElementById("pricedisplay").innerHTML = "";
+    document.getElementById("error").innerHTML = "";
+    document.getElementById("arrival-station").innerHTML = ``;
+    document.getElementById("departure-station").innerHTML = ``;
 });
-
-const pricedisplay = document.getElementById("pricedisplay");
-pricedisplay.className = "";
-document.getElementById("error") = "";
