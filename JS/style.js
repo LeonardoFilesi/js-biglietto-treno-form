@@ -16,8 +16,10 @@
 // BOTTONE:
 const sumbitBtn = document.getElementById("submit-btn");
 sumbitBtn.addEventListener("click", function() {
+console.log("click");
 
-// LABELS:
+
+// LABELS: chiedere info all'utente
 
 // Salutare l'utente e chiedere il numero di chilometri che vuole percorrere
 const inputTravelKm = document.getElementById("distance");
@@ -33,18 +35,25 @@ console.log(userAge);
 
 inputUserAge.value = "";
 
-// OPZIONALE: Chiedere stazione di partenza e stazione di arrivo
+// OPZIONALE: Chiedere stazione di partenza
 const inputStartStation = document.getElementById("startstation");
-const startStation = inputStartStation.textContent;
+const startStation = inputStartStation.value;
+
 console.log(startStation)
 document.getElementById("departure-station").innerHTML = ` ${startStation}`;
-inputStartStation.textContent = "";
 
+inputStartStation.value = "";
+
+// OPZIONALE: Chiedere stazione di arrivo
 const inputArrival = document.getElementById("arrival");
-const arrivalStation = inputArrival.textContent;
+const arrivalStation = inputArrival.value;
+
 console.log(arrivalStation)
 document.getElementById("arrival-station").innerHTML = ` ${arrivalStation}  `;
-arrivalStation.textContent = "";
+
+inputArrival.value = "";
+
+
 
 // Calcolare il prezzo totale del viaggio applicando queste regole
     // Prezzo al km 0.21£
@@ -54,29 +63,27 @@ const underageDiscount = (0.80);
     // Sconto 40% per gli over 65
 const over65Discount = (0.60);
 
-// Controllare le risposte dell'utente
-
-
-// Prezzo finale per un minorenne
+// Prezzo finale
 let finalPrice = "";
-if (userAge < 18) {
+if (userAge === "minorenne") {
     finalPrice = (travelKm * priceKm * underageDiscount).toFixed(2);
-} else if (userAge >= 65) {
+} else if (userAge === "over65") {
     finalPrice = (travelKm * priceKm * over65Discount).toFixed(2);
 } else {
     finalPrice = (travelKm * priceKm).toFixed(2);
 }
 console.log(finalPrice)
 
+
 // Stampare prezzo finale con controllo risposte utente
 const pricedisplay = document.getElementById("pricedisplay");
 pricedisplay.className = "";
 
 if (isNaN(travelKm)) {
-    document.getElementById("error").innerHTML = "Errore! Ricaricare la pagina e compilare il form correttamente"
-} else if (isNaN(userAge)) {
+    // Controllo delle risposte dell'utente
     document.getElementById("error").innerHTML = "Errore! Ricaricare la pagina e compilare il form correttamente"
 } else {
+    // Stampa del prezzo finale
     document.getElementById("pricedisplay").innerHTML = `Il prezzo del suo biglietto è: ${finalPrice}£`;
 }
 
